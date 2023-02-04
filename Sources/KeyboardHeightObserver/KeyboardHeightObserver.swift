@@ -13,6 +13,8 @@ public class KeyboardHeightObserver: ObservableObject {
 
     @Published public var height: CGFloat = 0
 
+    public init() {}
+
     fileprivate var keyboardHeightPublisher: AnyPublisher<CGFloat, Never> {
         Publishers.Merge(
             NotificationCenter.default
